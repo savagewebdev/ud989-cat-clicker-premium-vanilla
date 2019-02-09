@@ -1,8 +1,8 @@
 
-/* ======= Model ======= */
+/* ======= Model ======= */ // Cat object containing picture information about the cat.
 
 var model = {
-    currentCat: null,
+    currentCat: null, // To-be-defined method. The cat currently displayed.
     cats: [
         {
             clickCount : 0,
@@ -38,7 +38,8 @@ var model = {
 };
 
 
-/* ======= Octopus ======= */
+/* ======= Octopus ======= */ // Data controlling the relationship of the model with
+// the view itself.
 
 var octopus = {
 
@@ -72,9 +73,9 @@ var octopus = {
 };
 
 
-/* ======= View ======= */
+/* ======= View ======= */ // The Portion of code geared toward HTML/view.
 
-var catView = {
+var catView = { // An object selecting the cat HTML elements.
 
     init: function() {
         // store pointers to our DOM elements for easy access later
@@ -92,7 +93,7 @@ var catView = {
         this.render();
     },
 
-    render: function() {
+    render: function() { // An object method rendering
         // update the DOM elements with values from the current cat
         var currentCat = octopus.getCurrentCat();
         this.countElem.textContent = currentCat.clickCount;
